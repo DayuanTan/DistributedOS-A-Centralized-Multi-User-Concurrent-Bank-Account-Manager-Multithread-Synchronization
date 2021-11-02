@@ -1,6 +1,6 @@
 # DistributedOS
 
-# Project 1: A Centralized Multi-User Concurrent Bank Account Manager
+# Project 1: A Centralized Multi-User Concurrent Bank Account Manager (Multithreading)
 
 The system has two important components:
 1. **Bank Server**: 
@@ -13,3 +13,7 @@ System architecture:
 ![](./proj1_centralized_multiuser_bank/doc/project1.jpg)
 
 More assignment details [PDF here](./proj1_centralized_multiuser_bank/doc/Project_1_Fall_2021.pdf), [HTML here](http://lass.cs.umass.edu/~shenoy/courses/spring05/labs/project1.html).
+
+References:
+1. https://www.geeksforgeeks.org/socket-programming-cc/?ref=lbp
+
