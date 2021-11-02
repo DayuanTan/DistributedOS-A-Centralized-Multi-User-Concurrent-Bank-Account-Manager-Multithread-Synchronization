@@ -1,6 +1,6 @@
 # DistributedOS
 
-# Project 1 A Centralized Multi-User Concurrent Bank Account Manager
+# Project 1: A Centralized Multi-User Concurrent Bank Account Manager
 
 The system has two important components:
 1. **Bank Server**: 
