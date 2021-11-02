@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><title>CS 677 Operating Systems Project Part 1</title>
+<meta content="en-us" http-equiv="Content-Language">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="GENERATOR" content="MSHTML 6.00.2800.1276">
+<meta name="ProgId" content="FrontPage.Editor.Document"></head>
+<body>
+<h2 align="center"><a href="http://lass.cs.umass.edu/%7Eshenoy/courses/spring04/677/">CS 677 Distributed 
+Operating Systems</a></h2>
+<p align="center">Spring 2005</p>
+<p align="center"><b>Programming Assignment 1: A Centralized Bank Account Manager</b></p>
+<p align="center">Due: March 11th - in class</p>
+<p align="center">(for off-campus students - 14 days after viewing Lecture 8 )</p>
+<hr>
+
+<ul>
+  <li>You may work in groups of two for this lab assignment. </li>
+  <li> A link to a <a href="proj1_faq.html">FAQ</a> for this project. 
+  The link will be updated to answer common questions about the assignment. </li>
+  <li> Here are some <a href="proj_ref.html">useful 
+  references</a> for this project. 
+  </li></ul>
+<hr>
+
+<h3 align="left">1 The Problem</h3>
+<p align="left">
+In this programming assignment you are to implement a Centralized Multi-User 
+Concurrent Bank Account Manager. The system has two important components:
+<ol>
+<li> <strong>Bank Server</strong> <br> The server program that services online requests for account
+     manipulations and maintains all customer records correctly.
+<li> <strong>Clients</strong> <br> Customers are clients of the bank server and use its services
+to update bank accounts. The operations that can be performed on an account are:
+<strong> withdrawl</strong> of an amount  from an account and <strong>deposit</strong> of an amount into an account.
+Additionally, the bank server can have it's own service that periodically
+deposits an interest amount to each account based on some fixed rate.
+</ol>
+<p>
+An pictorial representation of the system is as shown in the figure below.
+<center> <img src=project1.jpg></img> </center>
+<p>
+<hr>
+
+The components of the system and their functionalities to be implemented are as follows: <br> 
+<ol>
+<li> <strong>Server</strong><br>
+The server receives queries from customers (ATM clients, Clients/Billing agencies performing
+online transactions etc.) for operations on accounts. <br>
+The server should have the following functionalities: <br>
+<ul>
+<li> Should be able to accept multiple concurrent customer requests (i.e., must be multi-threaded)
+<li> It should provide locking/protection for access to an account records during shared access (i.e., a user might be depositing
+     money into his account and at the same time a online billing agent might be withdrawing money from the same
+	 account). Such cases need to be correctly handled by protecting variables in the critical section.
+<li> Maintain correctness of records at each record, (i.e., allow withdrawl from an account only if it has sufficient funds etc)
+<li> To create a set of records at the server initially, you can use an input file that the server
+     reads and creates account information. <br>
+	 An example input file format could be:
+	 <pre>
+	 101 Peter 16000
+	 102 John  1200
+	 103 Gambo 11000
+	 .
+	 .
+	 .
+	 </pre>
+	 The format for each line being: <em>account number, name, balance amount</em>
+</ul>
+<li> <strong>Client</strong><br>
+A client issues requests to the server from a transaction based on account numbers.  <br>
+Client functionality: 
+<ul>
+<li> Issue withdrawl or deposit requests. 
+<li> For ease of testing and to make experiments bigger, the clients can issue requests
+     at fixed time intervals. A client can read an input file for transaction information
+	 and perform those tasks accordingly. <br>For example, following is a format you can use
+	 to generate input for each client and use it in experiments.
+	 <pre>
+	 10 101 w 200
+	 25 101 d 300
+	 26 105 d 150
+	 .
+	 .
+	 .
+	 </pre>
+	 Each line of the input file is a transaction request to be issued by the client and
+	 has the following format: <em>timestamp, account number, transaction type(withdrawl/deposit), amount</em>
+<li> Should receive status of transaction from server and print or log status for each.
+</ul>
+</ol>
+
+<hr>
+The purpose of this 
+assignment is to get you familiarized with <em>sockets/RPCs, processes, threads and 
+synchronization. </em>
+<p align="left">You can be creative with this project. (like add create new online accounts, which
+means add new functionalities, other than mentioned above, at both client and server etc.) <br>
+You are free to use any 
+programming languages (C, C++, Java, etc) and any abstractions such as sockets, 
+RPCs, RMIs, threads, events, etc. that might be needed.</p>
+<p align="left"><b>Some things to keep in mind:</b></p>
+<ul>
+  <li>The server should be able to handle multiple transaction
+  requests at the same time. This could be easily done using threads. Be aware 
+  of the thread synchronizing issues to avoid inconsistency or deadlock in your 
+  system. 
+  <li> The server should provide protection for shared simultaneous access to the same record
+  using semaphores or locks etc.
+  </li><li>No GUIs are required. Simple command line interfaces are fine. 
+  </li><li>You can work in groups of two for this assignment. </li></ul>
+<hr>
+
+  
+<h3 align="left">2 Evaluation and Measurement</h3>
+<p aligh="left">
+<strong> Correctness</strong> <br>
+Demonstrate that your system works correctly according to requirements stated in the
+description of the system.
+<ol>
+<li> Show that the server preserves correctness of transactions by deducting money
+only when available, is multi-threaded and accepts requests concurrently.
+<li> Show use of locks/semaphores that protects simultaneous access to the same account.
+i.e., design a test experiment(s) to demonstrate this using logs or message display during events.
+</ol>
+<strong>Scalability</strong><br>
+<ol>
+<li> Use a set of periodic requests at each client (e.g., each sending a request every 2 secs)
+and vary the number of clients connected to the server.
+Measure the average time to complete each transaction for each client.
+Plot a graph to show average time to complete each transaction as number of clients are increased
+(say from 1 to 100).
+<li> The same experiment can be repeated by fixing the number for clients (to say 25) and then
+varying the request rate. i.e., one request every 0.1,0.2,...1 secs etc.
+Measure and plot the average time to complete each transaction as the request rate is varied.
+</ol>
+<small>These are guidelines only, so be creative in what can be evaluated and measured as 
+part of your experiments to test the system.</small>
+
+<hr>
+
+<h3 align="left">3 What you will submit</h3>
+<p align="left">When you have finished implementing the complete assignment as 
+described above, put all the code in a separate directory in your edlab account 
+(/677/project1). 
+</p><p align="left">You are required to submit your solution in the form of 
+<b>printouts</b>. 
+</p><blockquote>Each program must work correctly and be <b>documented</b>. You 
+  should hand in: 
+  <ol>
+    <li>A copy of the output generated by running your program. When the
+sensor proxy receives data, have your program print a message "data received
+from source s" . When a sink is sent data by the proxy server, have your
+program print messages for the data being sent by the proxy and for the data being
+received by the sink.
+    </li><li>A separate (<b>typed</b>) document of approximately two pages describing 
+    the overall program design, a description of "how it works", and design 
+    tradeoffs considered and made. Describe clearly how multiple threads and 
+    synchronization are handled. Also describe possible improvements and 
+    extensions to your program (and sketch how they might be made). 
+	<li> Prepare a list of design considerations you made while designing your system and 
+	describe each briefly. This is similar to the design considerations discussed in class of the Email
+	system on the last slide of Lecture 2.</li>
+    </li><li>A program listing containing in-line documentation. 
+    </li><li>Instructions to compile and run the code from 677/project1. 
+    </li><li>A separate description of the tests you ran on your program to convince 
+    yourself that it is indeed correct. Also describe any cases for which your 
+    program is known not to work correctly. 
+    </li><li>Performance results. 
+    <ul></ul></li></ol></blockquote>
+<p align="left">Let us not waste a lot of trees. So, if any of the above turn out 
+to be large, just save the relevant information in a file, leave it on your 
+EDLAB account and submit the name of the file. </p>
+
+
+<hr>
+<h3 align="left">4 Grading policy for all programming assignments</h3>
+<p align="left"><b>Grading:</b></p>
+<blockquote>
+  <ul>
+    <li>Program Listing 
+    <ul>
+      <li>works correctly ------------- 50% 
+      </li><li>in-line documentation -------- 15% </li></ul>
+    </li><li>Design Document 
+    <ul>
+      <li>quality of design ------------ 15% 
+      </li><li>understandability of doc ------- 10% </li></ul>
+    </li><li>Thoroughness evaluation ---------- 10% </li></ul></blockquote>
+<p>Grades for late programs will be lowered 12 points per day 
+late.</p></body></html>
