@@ -12,8 +12,14 @@ System architecture:
 
 ![](./proj1_centralized_multiuser_bank/doc/project1.jpg)
 
+State diagram for server and client model:
+
+![](./proj1_centralized_multiuser_bank/doc/Socket_server.png)
+
+
 More assignment details [PDF here](./proj1_centralized_multiuser_bank/doc/Project_1_Fall_2021.pdf), [HTML here](http://lass.cs.umass.edu/~shenoy/courses/spring05/labs/project1.html).
 
 References:
 1. https://www.geeksforgeeks.org/socket-programming-cc/?ref=lbp
+2. https://stackoverflow.com/a/69309213/9593219
 
