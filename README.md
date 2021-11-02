@@ -1,5 +1,10 @@
 # DistributedOS
 
+## Environments:
+
+All tests are on Ubuntu 16.04 LTS, g++ (Ubuntu 5.4.0-6ubuntu1~16.04.12) 5.4.0 20160609.
+
+
 # Project 1: A Centralized Multi-User Concurrent Bank Account Manager (Multithreading)
 
 The system has two important components:
