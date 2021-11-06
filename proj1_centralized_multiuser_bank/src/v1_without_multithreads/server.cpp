@@ -94,7 +94,7 @@ int main(int argc, char *argv[])
         // valread = read( new_socket , buffer, 1024);
         // printf("%s\n",buffer );
 
-        // sending a message to server
+        // sending a message to client
         const char *msg = "Hello from server";
         send(new_socket , msg , strlen(msg) , 0 );
         printf("Server: sent to client(%s:%d): '%s'\n", client_ip, ntohs(client_addr.sin_port), msg);
