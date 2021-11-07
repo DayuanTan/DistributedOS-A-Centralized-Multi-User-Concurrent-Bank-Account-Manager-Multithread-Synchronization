@@ -34,17 +34,28 @@ Phase 1 (Version 1): Socket programming (without multithreads)
 
 Phase 2 (Version 2): Add multithreads on Phase 1.
 
-Phase 3 (Version 3): Add mutex on Phase 2.
+Phase 3 (Version 3): Add mutex (lock) on Phase 2. (Add account helper functions first.) 
 
 
 ### References:
 
 Socket:
 
-1. https://www.geeksforgeeks.org/socket-programming-cc/?ref=lbp
-2. https://stackoverflow.com/a/69309213/9593219
+1. [Socket programming example 1](https://www.geeksforgeeks.org/socket-programming-cc/?ref=lbp)
+2. [Socket programming example 2](https://stackoverflow.com/a/69309213/9593219)
 
 Multithread:
 
-3. https://stackoverflow.com/questions/38153680/integrating-pthread-create-and-pthread-join-in-the-same-loop
+3. [pthread_join need to be outside of pthread_create loop](https://stackoverflow.com/questions/38153680/integrating-pthread-create-and-pthread-join-in-the-same-loop)
 
+Mutex:
+
+4. [pthread_mutex](https://stackoverflow.com/questions/34100575/c-using-mutex-in-multithreaded-client-and-server)
+
+C++ programming tricks:
+
+5. [use typedef for struct](https://stackoverflow.com/questions/32577808/how-to-create-a-new-instance-of-a-struct)
+
+6. [c++ need cast the result of malloc](https://stackoverflow.com/a/52362916/9593219)
+
+7. [c++ static cast](https://stackoverflow.com/questions/15937309/errorpe513-a-value-of-type-void-cannot-be-assigned-to-an-entity-of-type)
