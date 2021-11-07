@@ -28,7 +28,7 @@ More assignment details [PDF here](./proj1_centralized_multiuser_bank/doc/Projec
 
 ## Implementaion:
 
-Check out [this directory](proj1_centralized_multiuser_bank).
+Check out [this directory](proj1_centralized_multiuser_bank/src).
 
 Phase 1 (Version 1): Socket programming (without multithreads)
 
