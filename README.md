@@ -24,6 +24,19 @@ State diagram for server and client model:
 
 More assignment details [PDF here](./proj1_centralized_multiuser_bank/doc/Project_1_Fall_2021.pdf), [HTML here](http://lass.cs.umass.edu/~shenoy/courses/spring05/labs/project1.html).
 
+
+
+## Implementaion:
+
+Check out [this directory](proj1_centralized_multiuser_bank).
+
+Phase 1 (Version 1): Socket programming (without multithreads)
+
+Phase 2 (Version 2): Add multithreads on Phase 1.
+
+Phase 3 (Version 3): Add mutex on Phase 2.
+
+
 References:
 
 Socket:
