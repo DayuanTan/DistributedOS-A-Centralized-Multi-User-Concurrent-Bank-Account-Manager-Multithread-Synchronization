@@ -34,7 +34,7 @@ Phase 1 (Version 1): Socket programming (without multithreads)
 
 Phase 2 (Version 2): Add multithreads on Phase 1.
 
-Phase 3 (Version 3): Add mutex (lock) on Phase 2. (Add account helper functions first.) 
+Phase 3 (Version 3): Add mutex (lock) on each account at server side Phase 2. (Add account initialization functions first.) 
 
 
 ### References:
