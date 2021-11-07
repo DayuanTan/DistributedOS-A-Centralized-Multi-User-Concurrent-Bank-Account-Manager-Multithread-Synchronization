@@ -26,7 +26,7 @@ More assignment details [PDF here](./proj1_centralized_multiuser_bank/doc/Projec
 
 
 
-## Implementaion:
+## Project 1 Implementation:
 
 Check out [this directory](proj1_centralized_multiuser_bank/src).
 
@@ -37,7 +37,7 @@ Phase 2 (Version 2): Add multithreads on Phase 1.
 Phase 3 (Version 3): Add mutex on Phase 2.
 
 
-References:
+### References:
 
 Socket:
 
