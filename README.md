@@ -49,6 +49,8 @@ The assignment says "It should provide locking/protection for access to an accou
 
 I set up a mutex lock for each account. So when d/w it will ask for the lock first and then finish the transaction operation, followed by unlock corresponding account. Check out server.cpp line 132 transaction_oper() function.
 
+![](proj1_centralized_multiuser_bank/doc/server_log.jpg)
+
 2. High transaction volume (synchronization proof)
 
 If the transaction amount is small, like 1000, the server deal with them quickly and cannot generate the running time overlap between  multiple clients. The server executes transactions so fast, making the execution become sequential, i.e. it finishes all 1000 transactions for client 1 (because so fast) and then finishes all 1000 transacttionf for client 2. 
