@@ -150,11 +150,13 @@ Then open second termial, run
 ./launch_25_clients_w_rate.sh 
 ```
 
-|||||||||||
-|-|-|-|-|-|-|-|-|-|-|
-|rate|100|250|500|750|1000|
-|Transaction avg complete time (ms)|0.001404||
+||||||||||
+|-|-|-|-|-|-|-|-|-|
+|rate|0.1|1|5|10|50|100|200|
+|Transaction avg complete time (ms)|0.00388|0.003372|0.001192|0.000592|0.0006|0.001404||0.000932|
 ||
+
+![](proj1_centralized_multiuser_bank/doc/scalability2.png)
 
 ### References:
 
