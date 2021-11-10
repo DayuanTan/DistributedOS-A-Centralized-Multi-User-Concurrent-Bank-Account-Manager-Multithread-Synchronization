@@ -30,13 +30,13 @@ More assignment details [PDF here](./proj1_centralized_multiuser_bank/doc/Projec
 
 Check out [this directory](proj1_centralized_multiuser_bank/src).
 
-- Phase 1 (Version 1): Socket programming (without multithreads)
+- Phase 1 (Version 1): Socket programming (without multithreads).
 
 - Phase 2 (Version 2): Add multithreads on Phase 1.
 
 - Phase 3 (Version 3): Add mutex (lock) on each account at server side Phase 2. (Add account initialization functions first.) 
 
-- Phase 4 (Version 4): Add other necessary operation functions. Complete
+- Phase 4 (Version 4): Add other necessary operation functions. Complete.
   - Write a gen_transactions_file.cpp file to generate high volume transactions.
   - read transactions
   - withdraw / deposit
@@ -96,7 +96,7 @@ Below is the screenshot that shows Synchronization.
 
 ### **Transaction avg complete time (ms) over clients amount**
 
-Use [v5_scalability/gen_transactions_file.cpp](proj1_centralized_multiuser_bank/src/gen_transactions_file.cpp) and [v5_scalability/launch_multi_clients.sh](proj1_centralized_multiuser_bank/src/v5_scalability/launch_multi_clients.sh).
+Use [v5_scalability/gen_transactions_file.cpp](proj1_centralized_multiuser_bank/src/v5_scalability/gen_transactions_file.cpp) and [v5_scalability/launch_multi_clients.sh](proj1_centralized_multiuser_bank/src/v5_scalability/launch_multi_clients.sh).
 
 
 To run it, open first terminal, run 
