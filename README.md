@@ -143,7 +143,9 @@ make
 ./server 
 ```
 
-Open second termial, run
+Modify the rate as you want in the file "launch_25_clients_w_rate.sh".
+
+Then open second termial, run
 ```linux
 ./launch_25_clients_w_rate.sh 
 ```
@@ -151,7 +153,7 @@ Open second termial, run
 |||||||||||
 |-|-|-|-|-|-|-|-|-|-|
 |rate|100|250|500|750|1000|
-|Transaction avg complete time (ms)|0.002996|0.003428|0.002544|0.002396|
+|Transaction avg complete time (ms)|0.001404||
 ||
 
 ### References:

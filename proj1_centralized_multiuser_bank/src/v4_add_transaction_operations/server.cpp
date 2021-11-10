@@ -190,7 +190,8 @@ void *client_connection_handler(void * socket){
                 int account_no = std::stoi(v[1].c_str());
                 string transaction_type = v[2];
 
-                sleep(timestamp - time);
+                // sleep(timestamp - time); cannot use sleep(int), it rounds down.
+                usleep( (timestamp - time)*1000000 ); //microseconds *10^6 = 1 second
                 time = timestamp; 
                 int transaction_result = transaction_oper(timestamp, account_no, transaction_type, transaction_amount);
 
