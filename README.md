@@ -49,6 +49,8 @@ Check out [this directory](proj1_centralized_multiuser_bank/src).
 
 ## Explanation
 
+A (video](https://www.youtube.com/watch?v=fOTTy4Zn5cc) is also provided to explane my implementation.
+
 ### **1. Synchronization**
    
 The assignment says "It should provide locking/protection for access to an account records during shared access (i.e., a user might be depositing money into his account and at the same time an online billing agent might be withdrawing money from the same account). Such cases need to be correctly handled by protecting variables in the critical section."
