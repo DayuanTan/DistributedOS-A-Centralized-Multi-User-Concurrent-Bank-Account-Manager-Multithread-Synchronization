@@ -49,7 +49,7 @@ Check out [this directory](proj1_centralized_multiuser_bank/src).
 
 ## Explanation
 
-A (video](https://www.youtube.com/watch?v=fOTTy4Zn5cc) is also provided to explane my implementation.
+A [video](https://www.youtube.com/watch?v=fOTTy4Zn5cc) is also provided to explane my implementation.
 
 ### **1. Synchronization**
    
