@@ -19,6 +19,8 @@ System architecture:
 
 ![](./proj1_centralized_multiuser_bank/doc/project1.jpg)
 
+![](./proj1_centralized_multiuser_bank/doc/dsbank_structure-2.png)
+
 State diagram for server and client model:
 
 ![](./proj1_centralized_multiuser_bank/doc/Socket_server.png)
