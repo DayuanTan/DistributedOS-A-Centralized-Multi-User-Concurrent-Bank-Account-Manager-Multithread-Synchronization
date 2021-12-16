@@ -1,5 +1,7 @@
 # DistributedOS
 
+This is my cpp implementation of a centralized bank account management system. It supports one server and multtiple clients. The server creates a seperate thread for each client. It ensures the data safety on server side via adding mutex/lock on account data.
+
 ## Environments:
 
 All tests are on Ubuntu 16.04 LTS, g++ (Ubuntu 5.4.0-6ubuntu1~16.04.12) 5.4.0 20160609.
