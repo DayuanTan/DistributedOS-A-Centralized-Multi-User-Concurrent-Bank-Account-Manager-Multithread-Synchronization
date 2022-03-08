@@ -28,6 +28,7 @@ State diagram for server and client model:
 
 More assignment details [PDF here](./proj1_centralized_multiuser_bank/doc/Project_1_Fall_2021.pdf), [HTML here](http://lass.cs.umass.edu/~shenoy/courses/spring05/labs/project1.html).
 
+These are reference solutions when I worked as TA for this class.
 
 
 # Important Notice for Registered Students:
